@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>Numero de orden: <%=ordenDetalles[0].orden_id%></h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><a href="">Titulo</a></th>
+            <th>Foto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% ordenDetalles.forEach( ordenDetalle => { %>
+            <tr>
+                <td><%=ordenDetalle.titulo%></td>
+                <td>
+                  <img src="/images/fotos/<%=ordenDetalle.contenido%>" height="300px" alt="" class="w-50">
+                </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+  
+    </div>
+  
+  </div>
+  

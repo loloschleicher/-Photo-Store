@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-12">
+      <h2>Ordenes del cliente <%=cliente.nombre%></h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><a href="">Total Fotos</a></th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% ordenes.forEach( orden => { %>
+            <tr>
+              <td><%=orden.total%></td>
+              <td><%=orden.fecha%></td>
+              <td><button><a href="/admin/ordenes_detalles/<%=orden.id%>">Detalles</a></button></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+  
+    </div>
+  
+  </div>
+  

@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-12">
+      <h2>Admin - Clientes</h2>
+      
+      <table class="table">
+        <thead>
+          <tr>
+            <th>nombre</th>
+            <th>email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% clientes.forEach( cliente => { %>
+            <tr>
+              <td><a href="/admin/ordenes/<%=cliente.id%>"><%=cliente.nombre%></a></td>
+              <td><%=cliente.email%></td>
+            
+              <td>
+                <% if (cliente.estado) { %>
+                <a href="/admin/estado-cliente/<%=cliente.id%>" class="btn btn-info">Desactivar Cliente</a>
+                <% } else { %>
+                <a href="/admin/estado-cliente/<%=cliente.id%>" class="btn btn-primary">Activar Cliente</a>
+                <% } %>
+              </td>
+            
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+  
+    </div>
+  
+  </div>
+  
